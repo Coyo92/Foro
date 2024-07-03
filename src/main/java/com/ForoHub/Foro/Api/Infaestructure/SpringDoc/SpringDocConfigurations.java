@@ -16,8 +16,4 @@ public class SpringDocConfigurations {
                         .addSecuritySchemes ( "bearer-key" ,
                                 new SecurityScheme ( ).type ( SecurityScheme.Type.HTTP ).scheme ( "bearer" ).bearerFormat ( "JWT" ) ) );
     }
-    /*@Bean
-    public void message(){
-        System.out.println("bearer is working");
-    }*/
 }

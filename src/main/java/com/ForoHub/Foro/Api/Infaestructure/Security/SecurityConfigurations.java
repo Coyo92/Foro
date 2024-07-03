@@ -26,23 +26,7 @@ public class SecurityConfigurations {
          httpSecurity
                  .csrf(csrf -> csrf.disable())
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                //.csrf ( Customizer.withDefaults() )
-                //.disable ( )
-                //.sessionManagement ( )
-                //.sessionCreationPolicy( SessionCreationPolicy.STATELESS) // Le indicamos a Spring el tipo de sesion
-                //.and()
-                //.authorizeRequests()
-                //.authorizeHttpRequests(authorize -> authorize
-                //        .requestMatchers( HttpMethod.POST, "/login").permitAll()
-                //        .requestMatchers("/swagger/**", "/v3/**","/swagger-ui/**").permitAll()
-                //        .anyRequest()
-                //        .authenticated()
-                //)
-                //.and()
-                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
-                //.build();
-                //;
-                ;
+                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class);
          return httpSecurity.build();
     }
 

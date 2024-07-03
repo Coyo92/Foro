@@ -1,8 +1,5 @@
 package com.ForoHub.Foro.Api.Domain.Topico.Topico;
 
-import com.ForoHub.Foro.Api.Domain.Topico.Respuestas.RespuestaApi;
-import com.ForoHub.Foro.Api.Domain.Topico.Respuestas.RespuestaData;
-
 import java.time.LocalDateTime;
 
 public record RegisterTopicoData (

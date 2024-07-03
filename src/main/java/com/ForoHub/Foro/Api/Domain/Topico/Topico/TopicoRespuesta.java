@@ -1,8 +1,5 @@
 package com.ForoHub.Foro.Api.Domain.Topico.Topico;
 
-import com.ForoHub.Foro.Api.Domain.Curso.CursoApi;
-import com.ForoHub.Foro.Api.Domain.Topico.Respuestas.RespuestaApi;
-
 import java.time.LocalDateTime;
 import java.util.List;
 

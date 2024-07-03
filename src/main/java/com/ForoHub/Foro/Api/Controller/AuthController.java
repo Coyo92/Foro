@@ -3,7 +3,6 @@ package com.ForoHub.Foro.Api.Controller;
 import com.ForoHub.Foro.Api.Domain.Users.AuthenticationUserData;
 import com.ForoHub.Foro.Api.Domain.Users.UserApi;
 import com.ForoHub.Foro.Api.Infaestructure.Security.DataJWTToken;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +29,7 @@ public class AuthController {
 
     @PostMapping
     public ResponseEntity autenticateUser(@RequestBody @Valid AuthenticationUserData authenticationUserData) {
-        Authentication authToken = new UsernamePasswordAuthenticationToken (//"alberto@gmail.com",
-                                                                            authenticationUserData.idemail (),
+        Authentication authToken = new UsernamePasswordAuthenticationToken (authenticationUserData.idemail (),
                                                                             authenticationUserData.password()
                                                                             );
         var AuthenticatedUser = authenticationManager.authenticate(authToken);

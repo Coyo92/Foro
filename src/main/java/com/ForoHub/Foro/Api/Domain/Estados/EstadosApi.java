@@ -1,4 +1,4 @@
-package com.ForoHub.Foro.Api.Domain.Perfil;
+package com.ForoHub.Foro.Api.Domain.Estados;
 
 
 import jakarta.persistence.Entity;
@@ -11,18 +11,17 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Table(name = "perfil")
-@Entity(name = "PerfilApi")
+@Table(name = "estado")
+@Entity(name = "EstadosApi")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = "idperfil")
-public class PerfilApi {
+@EqualsAndHashCode(of = "idstado")
+public class EstadosApi {
 
     @Id
     //@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idperfil;
-    private String nombre;
-    private int status;
+    private int idstado;
+    private String  estado;
     private LocalDateTime dateregister;
 }

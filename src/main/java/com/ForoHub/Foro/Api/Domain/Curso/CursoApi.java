@@ -27,7 +27,7 @@ public class CursoApi {
 
     public CursoApi( CurseData curseData, int idt) {
 
-        this.idcurso = idt;//topicoData.idtopico ();
+        this.idcurso = idt;
         this.status = 1;
         this.nombre = curseData.nombre ();
         this.categoria = curseData.categoria ();

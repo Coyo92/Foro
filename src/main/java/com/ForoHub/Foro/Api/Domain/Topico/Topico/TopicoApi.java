@@ -38,7 +38,6 @@ public class TopicoApi {
         this.idcurso = topicoData.idcurso ();
         this.respuesta = topicoData.respuesta ();
         this.dateregister = LocalDateTime.now();
-        //this.respuestaApi = new RespuestaApi( registerTopicoData.respuestaData () );
     }
 
     public TopicoApi(ListTopicoData topicoData) {
@@ -51,7 +50,6 @@ public class TopicoApi {
         this.idcurso = topicoData.idcurso ();
         this.respuesta = topicoData.respuesta ();
         this.dateregister = topicoData.dateregister ();
-        //this.respuestaApi = new RespuestaApi( registerTopicoData.respuestaData () );
     }
 
     public void udpateTopicoApi(TopicoData topicoData) {

@@ -2,6 +2,8 @@ package com.ForoHub.Foro.Api.Controller;
 
 import com.ForoHub.Foro.Api.Domain.Curso.CurseRepository;
 import com.ForoHub.Foro.Api.Domain.Curso.ListCursoData;
+import com.ForoHub.Foro.Api.Domain.Estados.EstadoRepository;
+import com.ForoHub.Foro.Api.Domain.Estados.ListEstadoData;
 import com.ForoHub.Foro.Api.Domain.Topico.Respuestas.ListRespData;
 import com.ForoHub.Foro.Api.Domain.Topico.Respuestas.ListRespuestaData;
 import com.ForoHub.Foro.Api.Domain.Topico.Respuestas.RespuestaRepository;
@@ -47,6 +49,9 @@ public class TopicoController {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private EstadoRepository estadoRepository;
 
     //Register New Topic
     @PostMapping
@@ -159,7 +164,8 @@ public class TopicoController {
             String mensaje = listTopico.mensaje ( );
             int iduser = listTopico.iduser ( );
             int idcurso = listTopico.idcurso ( );
-            int status = listTopico.status ( );
+            int idestado = listTopico.status ( );
+            String status = getEstadoData( idestado );
             LocalDateTime fecha = listTopico.dateregister ( );
 
             //Obteniendo la informacion para los arreglos del topico
@@ -209,6 +215,11 @@ public class TopicoController {
     public List<ListUserData> getUserData(int idUser) {
 
         return userRepository.findUserApiByIduser( idUser );
+    }
+
+    public String getEstadoData(int idEstado) {
+
+        return estadoRepository.getNombreEstadoById( idEstado );
     }
 
 }
